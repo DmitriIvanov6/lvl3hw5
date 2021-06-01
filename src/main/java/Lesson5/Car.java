@@ -30,10 +30,10 @@ public class Car implements Runnable {
         this.name = "Участник #" + CARS_COUNT;
     }
 
-    final static int THREADS_COUNT = 4;
-    final static CountDownLatch cd1 = new CountDownLatch(THREADS_COUNT);
-    final static CountDownLatch cd2 = new CountDownLatch(THREADS_COUNT);
-    final static CountDownLatch cd3 = new CountDownLatch(THREADS_COUNT - 1);
+
+    final static CountDownLatch cd1 = new CountDownLatch(CARS_COUNT);
+    final static CountDownLatch cd2 = new CountDownLatch(CARS_COUNT);
+    final static CountDownLatch cd3 = new CountDownLatch(CARS_COUNT - 1);
     final static Lock finisher = new ReentrantLock();
 
 
